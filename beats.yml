@@ -1,11 +1,12 @@
-  pipeline {
-    agent {label 'jenkins-ssh-slave'}
-
-    stages {
-      stage('Hello') {
-        steps {
-          sh 'ansible-playbook beats.yml'
-        }
-      }
-    }
-  }
+- name: Elastic Beats Installation
+  hosts: LinuxServers
+  roles:
+    - elastic-beats
+  vars:
+    beats_version: 7.16.3
+    beat: metricbeat
+    beat_conf:
+      metricbeat.modules:
+      - system
+      - kafka
+      enabled: true
