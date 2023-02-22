@@ -1,5 +1,8 @@
 172.31.14.61 ansible_ssh_pass=root ansible_ssh_user=root
+<<<<<<< HEAD
 172.31.10.76 ansible_ssh_pass=root ansible_ssh_user=root
 172.31.5.243 ansible_ssh_pass=root ansible_ssh_user=root
+=======
+>>>>>>> 3b0a7201f3c4acff8c69b41c3514adba47f70da2
 #[LinuxServers]
 
